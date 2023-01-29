@@ -10,7 +10,7 @@ const bar3 = document.getElementById("bar3");
      console.log("click")
       //window.alert("test")
       //sideMenu.classList.add("show")
-      if(sideMenu.className === "hide" || sideMenu.className === "hide") {
+      if(sideMenu.className === "hide") {
          sideMenu.classList.replace("hide","show");
          burgerToX()
          console.log("menu open");
@@ -29,15 +29,15 @@ const bar3 = document.getElementById("bar3");
 
   //make burger into an X
   function burgerToX() {
-    bar1.classList.add("firstBar");
-    bar2.classList.add("secondBar");
-    bar3.classList.add("thirdBar");
+    bar1.classList.replace("bar","firstBar");
+    bar2.classList.replace("bar","secondBar");
+    bar3.classList.replace("bar","thirdBar");
   }
 
   function burgerToNormal() {
-    bar1.classList.replace("firstBar", "firstBarBack");
-    bar2.classList.replace("secondBar", "secondBarBack");
-    bar3.classList.replace("thirdBar", "thirdBarBack")
+    bar1.classList.replace("firstBar", "bar");
+    bar2.classList.replace("secondBar", "bar");
+    bar3.classList.replace("thirdBar", "bar")
   }
  
  
