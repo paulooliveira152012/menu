@@ -6,6 +6,8 @@
 /* header section */
 header {
     display: flex;
+    background-color: #001a25;
+    color: #ffff;
 }
 
 header .container {
@@ -49,7 +51,7 @@ header h1 {
 .show {
     width: 240px;
     height: 100vh;
-    background-color: black;
+    background-color: #001a25c9;
     margin-left: 0;
     transition: .3s;
 }
@@ -103,4 +105,8 @@ header h1 {
     rotate: -180deg;
     margin-top: 0px;
     transition: .3s;
+}
+
+.hideMenu {
+    display: none;
 }
