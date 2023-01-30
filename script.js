@@ -11,22 +11,26 @@ const header = document.getElementById("header");
      console.log("click")
       //window.alert("test")
       //sideMenu.classList.add("show")
-      if(sideMenu.className === "hide") {
-         sideMenu.classList.replace("hide","show");
-         burgerToX()
-         console.log("menu open");
-       } // else {
-     //    sideMenu.classList.remove("show");
-     //    sideMenu.classList.add("hide")
-     //  }
-     else {
-        // window.alert("Test")
-         sideMenu.classList.replace("show", "hide");
-         //burgerToNormal()
-         console.log("menu closed");
-         burgerToNormal()
-     };
+     closeMenu()
   });
+
+  function closeMenu() {
+    if(sideMenu.className === "hide") {
+        sideMenu.classList.replace("hide","show");
+        burgerToX()
+        console.log("menu open");
+      } // else {
+    //    sideMenu.classList.remove("show");
+    //    sideMenu.classList.add("hide")
+    //  }
+    else {
+       // window.alert("Test")
+        sideMenu.classList.replace("show", "hide");
+        //burgerToNormal()
+        console.log("menu closed");
+        burgerToNormal()
+    };
+  }
 
   //make burger into an X
   function burgerToX() {
@@ -46,7 +50,8 @@ const header = document.getElementById("header");
     if(e.target.id !== "sideMenu" && e.target.id !== "container" && sideMenu.classList=="show")
     {
        console.log("click outside");
-       
+       burgerToNormal()
+       sideMenu.classList.replace("show", "hide");
     }
   }
  
