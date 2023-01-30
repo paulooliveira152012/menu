@@ -3,6 +3,7 @@ const sideMenu = document.getElementById("sideMenu");
 const bar1 = document.getElementById("bar1");
 const bar2 = document.getElementById("bar2");
 const bar3 = document.getElementById("bar3");
+const header = document.getElementById("header");
 
 
 
@@ -40,6 +41,14 @@ const bar3 = document.getElementById("bar3");
     bar3.classList.replace("thirdBar", "bar")
   }
  
+  //clicking outside the menu closes the menu
+  document.onclick = function(e) {
+    if(e.target.id !== "sideMenu" && e.target.id !== "container" && sideMenu.classList=="show")
+    {
+       console.log("click outside");
+       
+    }
+  }
  
 
 
